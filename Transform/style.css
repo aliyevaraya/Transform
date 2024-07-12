@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  height: 50vh;
+  background: #1a1d1f;
+  padding: 20px 0;
+}
+/* TASK 1 */
+#menu {
+  display: flex;
+  justify-content: space-around;
+  background: #a43a19;
+}
+#menu li a {
+  display: inline-block;
+  padding: 15px;
+  color: #fff;
+  font-size: 1.2em;
+}
+li ul a {
+  width: 150px;
+}
+#menu li {
+  position: relative;
+}
+#menu a:hover {
+  background-color: #000;
+}
+.dropdown-content,
+.dropdown2-content,
+.dropdown3-content {
+  display: none;
+  position: absolute;
+  background-color: #a43a19;
+}
+.dropdown:hover .dropdown-content,
+.dropdown2:hover .dropdown2-content,
+.dropdown3:hover .dropdown3-content {
+  display: block;
+}
+.dropdown2:hover .dropdown2-content {
+  left: 100%;
+  top: 0;
+}
+.dropdown3:hover .dropdown3-content {
+  left: 100%;
+  top: 0;
+}
+/* TASK 2 */
+.bgred {
+  background: #b54d4f;
+  padding: 30px 0;
+  text-align: center;
+}
+.bgblue {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: none;
+  background: #b0d4e9;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.bgblue::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #b0d4e9;
+  border-radius: 50px;
+  z-index: -2;
+}
+.bgblue::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #317da6;
+  transition: all 0.3s;
+  border-radius: 50px;
+  z-index: -1;
+}
+.bgblue:hover {
+  color: #fff;
+}
+.bgblue:hover::before {
+  width: 100%;
+}
+
+/* .bgblue:hover {
+  box-shadow: 118px 0 0 #69add5 inset;
+} */
+
+/* TASK 3 */
+.bggrey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2e3133;
+  height: 50vh;
+  overflow: hidden;
+}
+.btn3 {
+  height: 50px;
+  width: 250px;
+  line-height: 50px;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  transition: all 0.5s;
+}
+.btn3 span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.btn3::before,
+.btn3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  border: 1px solid #ffffff33;
+  background-color: #ffffff1a;
+}
+.btn3:hover::before,
+.btn3:hover::after {
+  background-color: transparent;
+}
+.btn3:hover::before {
+  transform: rotate(-45deg);
+}
+.btn3:hover::after {
+  transform: rotate(45deg);
+}
+/* TASK 4 */
+.bggreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4a7663;
+  padding: 40px 0;
+}
+.card {
+  width: 350px;
+  height: 200px;
+  padding: 30px 10px;
+  background: #fff;
+}
+.price {
+  margin: 40px 0 0 0;
+}
+.card p {
+  margin: 10px 0;
+}
+.btn2 {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  background: green;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.btn2 i{
+    font-size: 1.3em;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn2 span {
+  display: block;
+  position: absolute;
+  right: -300%;
+  top: 25%;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+.btn2:hover{
+    width: 140px;
+}
+.btn2:hover span {
+  right: 5%;
+}
