@@ -193,7 +193,6 @@ li ul a {
   display: block;
   position: absolute;
   right: -300%;
-  top: 25%;
   margin-left: 10px;
   transition: 0.3s;
 }
